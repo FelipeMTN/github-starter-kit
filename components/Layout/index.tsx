@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import { usePathname } from "next/navigation";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { enablePageScroll, clearQueueScrollLocks } from "scroll-lock";
 import Dividers from "@/components/Dividers";
 import Header from "@/components/Header";
@@ -18,12 +18,12 @@ const Layout = ({
     darkHeader,
     children,
 }: LayoutProps) => {
-    const pathname = usePathname();
+    const location = useLocation();
 
     useEffect(() => {
         clearQueueScrollLocks();
         enablePageScroll();
-    }, [pathname]);
+    }, [location.pathname]);
 
     return (
         <>
