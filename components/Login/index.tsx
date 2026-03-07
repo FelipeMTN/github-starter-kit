@@ -3,7 +3,7 @@ import Image from "@/components/Image";
 import Slider from "./Slider";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
-import { lovable } from "@/integrations/lovable/index";
+import { lovable } from "@/src/integrations/lovable/index";
 
 type LoginProps = {
     signUp?: boolean;
