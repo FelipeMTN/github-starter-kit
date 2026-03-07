@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
 
@@ -29,7 +29,7 @@ const Saving = ({}: SavingProps) => (
                 </div>
                 <div className="max-w-[46.6rem] text-greyscale-400">
                     Stop compromising between billing needs and engineering
-                    bandwidth. With Finto’s prebuilt interfaces and billing
+                    bandwidth. With Finto's prebuilt interfaces and billing
                     components
                 </div>
             </div>
@@ -46,7 +46,7 @@ const Saving = ({}: SavingProps) => (
                             </div>
                             <Link
                                 className="btn-primary btn-sm mt-auto pl-5 pr-3"
-                                href="/pricing"
+                                to="/pricing"
                             >
                                 <span>Learn More</span>
                                 <Icon className="w-5 h-5" name="arrow-right" />

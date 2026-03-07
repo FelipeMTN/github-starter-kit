@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Image from "@/components/Image";
 import Companies from "@/components/Companies";
 
@@ -25,21 +25,21 @@ const Main = ({}: MainProps) => (
                         Global Payment to Grow Your Businesses
                     </div>
                     <div className="max-w-[29.6rem] mb-10 text-greyscale-400 lg:max-w-full md:mb-6">
-                        Growing a SaaS business can be hard work. Whether you’re
-                        just starting out or selling like hotcakes, we’ve got
-                        your back. It’s free to start no trial, no contract, no
+                        Growing a SaaS business can be hard work. Whether you're
+                        just starting out or selling like hotcakes, we've got
+                        your back. It's free to start no trial, no contract, no
                         risk.
                     </div>
                     <div className="flex space-x-4 md:block md:space-x-0 md:space-y-4">
                         <Link
                             className="btn-primary min-w-[10.6rem] px-5 md:min-w-full"
-                            href="/sign-up"
+                            to="/sign-up"
                         >
                             Open an Account
                         </Link>
                         <Link
                             className="btn-secondary min-w-[10.6rem] px-5 md:min-w-full"
-                            href="/contact-us"
+                            to="/contact-us"
                         >
                             Contact Sales
                         </Link>

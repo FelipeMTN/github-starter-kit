@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
 
@@ -7,7 +7,7 @@ const solutions = [
         title: "Accept and Optimize Payment Globally",
         stage: "Payment",
         content:
-            "Keep your business account and all your finance needs safely organized under one roof. Manage money quickly, easily & efficiently. Whether you’re alone or leading a team.",
+            "Keep your business account and all your finance needs safely organized under one roof. Manage money quickly, easily & efficiently. Whether you're alone or leading a team.",
         image: "/images/content/solutions-pic-1.png",
         url: "/solutions",
     },
@@ -15,7 +15,7 @@ const solutions = [
         title: "Build a Fintech with Banking as a Service",
         stage: "Custom Card",
         content:
-            "Keep your business account and all your finance needs safely organized under one roof. Manage money quickly, easily & efficiently. Whether you’re alone or leading a team.",
+            "Keep your business account and all your finance needs safely organized under one roof. Manage money quickly, easily & efficiently. Whether you're alone or leading a team.",
         image: "/images/content/solutions-pic-2.png",
         url: "/solutions",
     },
@@ -34,7 +34,7 @@ const Solutions = ({}: SolutionsProps) => (
                 <div className="max-w-[48rem] text-greyscale-400 md:text-lg">
                     Keep your business account and all your finance needs safely
                     organized under one roof. Manage money quickly, easily &
-                    efficiently. Whether you’re alone or leading a team.
+                    efficiently. Whether you're alone or leading a team.
                 </div>
             </div>
             <div className="space-y-30 xl:space-y-24 lg:space-y-20 md:space-y-12">
@@ -53,7 +53,7 @@ const Solutions = ({}: SolutionsProps) => (
                             </div>
                             <Link
                                 className="btn-primary pr-5 md:w-full"
-                                href={solution.url}
+                                to={solution.url}
                             >
                                 <span>Learn More</span>
                                 <Icon className="w-5 h-5" name="arrow-right" />
