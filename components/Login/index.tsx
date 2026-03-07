@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Image from "@/components/Image";
 import Slider from "./Slider";
 import SignIn from "./SignIn";
@@ -38,7 +38,7 @@ const Login = ({ signUp }: LoginProps) => (
                             height={20}
                             alt=""
                         />
-                        <span>Sign In with Google</span>
+                        <span>Sign In with Apple</span>
                     </button>
                 </div>
                 <div className="flex items-center mb-5 md:mb-4">
@@ -50,10 +50,10 @@ const Login = ({ signUp }: LoginProps) => (
                 </div>
                 {signUp ? <SignUp /> : <SignIn />}
                 <div className="mt-10 text-center text-lg text-greyscale-400 md:mt-6">
-                    Don’t have an account?{" "}
+                    Don't have an account?{" "}
                     <Link
                         className="font-semibold text-greyscale-900 transition-colors hover:text-primary-100"
-                        href={signUp ? "/sign-in" : "sign-up"}
+                        to={signUp ? "/sign-in" : "/sign-up"}
                     >
                         {signUp ? "Sign In" : "Sign Up"}
                     </Link>

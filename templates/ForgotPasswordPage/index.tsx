@@ -1,7 +1,5 @@
-"use client";
-
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Dividers from "@/components/Dividers";
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
@@ -20,7 +18,7 @@ const ForgotPasswordPage = () => {
         >
             <div className="border-b border-white/[.09] bg-secondary-300">
                 <div className="container-md flex items-center h-22 md:h-18">
-                    <Link className="w-26 mr-auto md:w-22" href="/">
+                    <Link className="w-26 mr-auto md:w-22" to="/">
                         <Image
                             className="w-full opacity-100"
                             src="/images/logo-light.svg"
@@ -32,13 +30,13 @@ const ForgotPasswordPage = () => {
                     <div className="flex items-center ml-auto space-x-3">
                         <Link
                             className="btn-secondary bg-transparent btn-sm text-greyscale-0 hover:border-primary-300 hover:bg-primary-300 hover:text-greyscale-900 md:h-8 md:px-3 md:text-sm"
-                            href="/sign-in"
+                            to="/sign-in"
                         >
                             Sign In
                         </Link>
                         <Link
                             className="btn-primary btn-sm md:h-8 md:px-3 md:text-sm"
-                            href="/sign-up"
+                            to="/sign-up"
                         >
                             Open an Account
                         </Link>
@@ -60,7 +58,7 @@ const ForgotPasswordPage = () => {
                         Forgot password?
                     </div>
                     <div className="mb-10 text-center text-lg text-greyscale-400 md:mb-6">
-                        No worries, we’ll send you reset instructions.
+                        No worries, we'll send you reset instructions.
                     </div>
                     <form
                         className=""

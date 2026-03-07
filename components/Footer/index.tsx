@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
 
@@ -11,7 +11,7 @@ const Footer = ({}: FooterProps) => (
     <div className="mt-auto py-16 md:pt-12 md:pb-6">
         <div className="container">
             <div className="flex mb-18 lg:block lg:mb-14 md:mb-8">
-                <Link className="block w-23 mr-auto lg:mb-12 md:mb-8" href="/">
+                <Link className="block w-23 mr-auto lg:mb-12 md:mb-8" to="/">
                     <Image
                         className="w-full opacity-100"
                         src="/images/logo-dark.svg"
@@ -28,7 +28,7 @@ const Footer = ({}: FooterProps) => (
                         >
                             <Link
                                 className="inline-block mb-4 text-[#666D80] transition-colors hover:text-primary-100 md:mb-2 md:text-base"
-                                href={group.url}
+                                to={group.url}
                             >
                                 {group.title}
                             </Link>
@@ -36,7 +36,7 @@ const Footer = ({}: FooterProps) => (
                                 {group.links.map((link) => (
                                     <Link
                                         className="transition-colors hover:text-primary-100 md:text-base"
-                                        href={link.url}
+                                        to={link.url}
                                         key={link.id}
                                     >
                                         {link.title}

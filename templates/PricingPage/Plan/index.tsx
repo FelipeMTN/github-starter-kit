@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Item from "./Item";
 
 import { pricing, plan } from "@/mocks/pricing";
@@ -33,10 +33,10 @@ const Plan = ({}: PlanProps) => (
                                     ? "btn-secondary"
                                     : "btn-primary"
                             }`}
-                            href={
+                            to={
                                 item.type === "custom"
-                                    ? "contact-us"
-                                    : "sign-up"
+                                    ? "/contact-us"
+                                    : "/sign-up"
                             }
                         >
                             {item.type === "custom"

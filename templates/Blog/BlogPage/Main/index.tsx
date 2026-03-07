@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
 import Companies from "@/components/Companies";
@@ -33,7 +33,7 @@ const Main = ({}: MainProps) => (
                         </div>
                         <Link
                             className="btn-secondary pr-5.5 md:w-full"
-                            href={`/blog/${article.id}`}
+                            to={`/blog/${article.id}`}
                         >
                             <span>Read More</span>
                             <Icon className="w-5 h-5" name="arrow-right" />

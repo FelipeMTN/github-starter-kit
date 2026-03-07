@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Dividers from "@/components/Dividers";
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
@@ -45,7 +45,7 @@ const RelatedArticle = ({}: RelatedArticleProps) => (
                             </div>
                             <Link
                                 className="btn-secondary btn-sm mt-auto pr-3 md:w-full"
-                                href={`/blog/${article.id}`}
+                                to={`/blog/${article.id}`}
                             >
                                 <span>Read More</span>
                                 <Icon className="w-5 h-5" name="arrow-right" />

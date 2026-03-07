@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
 
@@ -51,7 +51,7 @@ const Revenue = ({}: RevenueProps) => (
                     </div>
                     <Link
                         className="btn-primary pr-5.5 md:w-full"
-                        href="/pricing"
+                        to="/pricing"
                     >
                         <span>Learn More</span>
                         <Icon className="w-5 h-5" name="arrow-right" />

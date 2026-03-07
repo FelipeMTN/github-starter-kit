@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Image from "@/components/Image";
 
 import { navigationHeader } from "@/constants/navigation";
@@ -38,7 +38,7 @@ const Header = ({ className, dark }: HeaderProps) => {
             }`}
         >
             <div className="container-md flex items-center h-22 md:h-18">
-                <Link className="shrink-0 w-26 mr-12 lg:mr-auto" href="/">
+                <Link className="shrink-0 w-26 mr-12 lg:mr-auto" to="/">
                     <Image
                         className="w-full opacity-100"
                         src={
@@ -64,7 +64,7 @@ const Header = ({ className, dark }: HeaderProps) => {
                                         ? "text-greyscale-0 hover:text-primary-300"
                                         : "text-greyscale-900 hover:text-primary-100"
                                 }`}
-                                href={link.url}
+                                to={link.url}
                                 key={link.id}
                             >
                                 {link.title}
@@ -78,11 +78,11 @@ const Header = ({ className, dark }: HeaderProps) => {
                                     ? "text-greyscale-0 hover:border-primary-300 hover:bg-primary-300 hover:text-greyscale-900"
                                     : ""
                             }`}
-                            href="/sign-in"
+                            to="/sign-in"
                         >
                             Sign In
                         </Link>
-                        <Link className="btn-primary btn-sm" href="/sign-up">
+                        <Link className="btn-primary btn-sm" to="/sign-up">
                             Open an Account
                         </Link>
                     </div>

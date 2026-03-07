@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Dividers from "@/components/Dividers";
 import Icon from "@/components/Icon";
 import Image from "@/components/Image";
@@ -27,19 +27,19 @@ const Main = ({}: MainProps) => (
                         <div className="mb-10 text-white/70 md:text-lg">
                             Keep your business account and all your finance
                             needs safely organized under one roof. Manage money
-                            quickly, easily & efficiently. Whether you’re alone
+                            quickly, easily & efficiently. Whether you're alone
                             or leading a team.
                         </div>
                         <div className="flex space-x-4 md:block md:space-x-0 md:space-y-4">
                             <Link
                                 className="btn-primary min-w-[10.6rem] px-5 md:min-w-full"
-                                href="/sign-up"
+                                to="/sign-up"
                             >
                                 Open an Account
                             </Link>
                             <Link
                                 className="btn-secondary min-w-[10.6rem] px-5 md:min-w-full"
-                                href="/contact-us"
+                                to="/contact-us"
                             >
                                 Contact Sales
                             </Link>

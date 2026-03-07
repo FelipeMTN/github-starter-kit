@@ -1,6 +1,4 @@
-"use client";
-
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Dividers from "@/components/Dividers";
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
@@ -14,7 +12,7 @@ const SuccessPage = () => {
         >
             <div className="border-b border-white/[.09] bg-secondary-300">
                 <div className="container-md flex items-center h-22 md:h-18">
-                    <Link className="w-26 mr-auto" href="/">
+                    <Link className="w-26 mr-auto" to="/">
                         <Image
                             className="w-full opacity-100"
                             src="/images/logo-light.svg"
@@ -23,7 +21,7 @@ const SuccessPage = () => {
                             alt=""
                         />
                     </Link>
-                    <Link className="group" href="/">
+                    <Link className="group" to="/">
                         <Icon
                             className="w-8 h-8 fill-greyscale-0 transition-colors group-hover:fill-primary-300"
                             name="close"
@@ -51,7 +49,7 @@ const SuccessPage = () => {
                     </div>
                     <Link
                         className="btn-primary btn-md min-w-[16.5rem]"
-                        href="/sign-in"
+                        to="/sign-in"
                     >
                         Back to Login
                     </Link>
