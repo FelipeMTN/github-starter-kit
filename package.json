@@ -12,10 +12,13 @@
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@types/scroll-lock": "^2.1.3",
+    "next": "14.0.3",
     "react": "^18",
     "react-animate-height": "^3.2.3",
     "react-dom": "^18",
+    "react-router-dom": "^7.13.1",
     "scroll-lock": "^2.1.5",
+    "sharp": "^0.32.6",
     "tailwind-merge": "^2.0.0"
   },
   "devDependencies": {
