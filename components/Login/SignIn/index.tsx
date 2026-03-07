@@ -1,23 +1,52 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Field from "@/components/Field";
 import Checkbox from "@/components/Checkbox";
+import { supabase } from "@/src/integrations/supabase/client";
 
 type SignInProps = {};
 
 const SignIn = ({}: SignInProps) => {
-    const [name, setName] = useState<string>("");
+    const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
     const [remember, setRemember] = useState<boolean>(false);
+    const [error, setError] = useState<string>("");
+    const [loading, setLoading] = useState<boolean>(false);
+    const navigate = useNavigate();
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setError("");
+        setLoading(true);
+
+        const { error } = await supabase.auth.signInWithPassword({
+            email,
+            password,
+        });
+
+        setLoading(false);
+
+        if (error) {
+            setError(error.message);
+        } else {
+            navigate("/");
+        }
+    };
 
     return (
-        <form className="" action="" onSubmit={() => console.log("Submit")}>
+        <form className="" action="" onSubmit={handleSubmit}>
+            {error && (
+                <div className="mb-4 p-3 rounded-lg bg-error-0 text-error-100 text-base">
+                    {error}
+                </div>
+            )}
             <Field
                 className="mb-4 md:mb-3"
                 classInput="h-12"
-                placeholder="Email or username"
-                value={name}
-                onChange={(e: any) => setName(e.target.value)}
+                placeholder="Email"
+                type="email"
+                value={email}
+                onChange={(e: any) => setEmail(e.target.value)}
                 required
             />
             <Field
@@ -43,7 +72,13 @@ const SignIn = ({}: SignInProps) => {
                     Forgot Password?
                 </Link>
             </div>
-            <button className="btn-primary btn-md w-full">Sign In</button>
+            <button
+                className="btn-primary btn-md w-full"
+                type="submit"
+                disabled={loading}
+            >
+                {loading ? "Signing In..." : "Sign In"}
+            </button>
         </form>
     );
 };
