@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Dividers from "@/components/Dividers";
 import Image from "@/components/Image";
 
@@ -15,7 +15,7 @@ const List = ({}: ListProps) => {
                         <Link
                             className="group flex flex-col w-[calc(50%-2rem)] mt-8 mx-4 p-4 bg-greyscale-0 border border-greyscale-100 shadow-2 lg:w-full lg:mx-0 md:mt-6"
                             key={customer.id}
-                            href="/customers"
+                            to="/customers"
                         >
                             <div className="flex justify-center items-center h-[16.25rem] bg-primary-100 md:h-[13.75rem]">
                                 <Image

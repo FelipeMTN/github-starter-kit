@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Icon from "@/components/Icon";
 
 type PackageProps = {
@@ -86,7 +86,7 @@ const Package = ({ item }: PackageProps) => (
             className={`w-full mt-9 md:mt-6 ${
                 item.type === "custom" ? "btn-secondary" : "btn-primary"
             }`}
-            href={item.type === "custom" ? "contact-us" : "sign-in"}
+            to={item.type === "custom" ? "/contact-us" : "/sign-in"}
         >
             {item.type === "custom" ? "Contact Us" : "Get Started"}
         </Link>

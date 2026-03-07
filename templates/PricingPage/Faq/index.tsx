@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Dividers from "@/components/Dividers";
 import FaqItem from "@/components/FaqItem";
 import Icon from "@/components/Icon";
@@ -26,7 +26,7 @@ const Faq = ({}: FaqProps) => (
                 ))}
             </div>
             <div className="mt-20 text-center xl:mt-16 md:mt-8">
-                <Link className="btn-primary pr-5.5 md:w-full" href="/faq">
+                <Link className="btn-primary pr-5.5 md:w-full" to="/faq">
                     <span>See All FAQ</span>
                     <Icon className="w-5 h-5" name="arrow-right" />
                 </Link>

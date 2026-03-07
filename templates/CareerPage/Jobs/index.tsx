@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Dividers from "@/components/Dividers";
 import Icon from "@/components/Icon";
 
@@ -30,7 +30,7 @@ const Jobs = ({ scrollToRef }: JobsProps) => (
                 {jobs.map((job) => (
                     <Link
                         className="group flex items-center p-6 border border-greyscale-100 bg-greyscale-0 transition-colors hover:border-primary-100 md:p-4"
-                        href="/career"
+                        to="/career"
                         key={job.id}
                     >
                         <div className="grow">
@@ -55,10 +55,10 @@ const Jobs = ({ scrollToRef }: JobsProps) => (
                 ))}
             </div>
             <div className="mt-16 text-greyscale-400 md:mt-8">
-                Don’s see opportunity that suits you?{" "}
+                Don's see opportunity that suits you?{" "}
                 <Link
                     className="text-secondary-300 underline transition-colors hover:text-primary-100 hover:no-underline"
-                    href="/contact-us"
+                    to="/contact-us"
                 >
                     Get notified when new roles added
                 </Link>

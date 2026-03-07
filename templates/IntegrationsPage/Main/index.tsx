@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Dividers from "@/components/Dividers";
 import Image from "@/components/Image";
 
@@ -29,13 +29,13 @@ const Main = ({}: MainProps) => (
                 <div className="flex justify-center space-x-4 md:block md:space-x-0 md:space-y-4">
                     <Link
                         className="btn-primary min-w-[10.6rem] px-5 md:min-w-full"
-                        href="/sign-up"
+                        to="/sign-up"
                     >
                         Open an Account
                     </Link>
                     <Link
                         className="btn-secondary min-w-[10.6rem] bg-greyscale-25 px-5 md:min-w-full"
-                        href="/contact-us"
+                        to="/contact-us"
                     >
                         Contact Sales
                     </Link>
