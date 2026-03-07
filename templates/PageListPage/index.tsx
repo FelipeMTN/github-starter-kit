@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 const items = [
     {
@@ -81,7 +81,7 @@ const PageListPage = () => {
             {items.map((item, index) => (
                 <Link
                     className="mb-1 font-medium text-greyscale-900 transition-colors hover:text-primary-300 last:mb-0"
-                    href={item.url}
+                    to={item.url}
                     key={index}
                 >
                     {item.title}

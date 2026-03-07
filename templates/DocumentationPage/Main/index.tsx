@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Dividers from "@/components/Dividers";
 
 const sorting = [
@@ -68,7 +68,7 @@ const Main = ({ scrollToRef }: MainProps) => {
                         Explore our guides and examples to integrate Finto.
                     </div>
                     <div className="flex justify-center space-x-4 md:block md:space-x-0 md:space-y-4">
-                        <Link className="btn-primary md:w-full" href="/pricing">
+                        <Link className="btn-primary md:w-full" to="/pricing">
                             Get started with payments
                         </Link>
                         <button

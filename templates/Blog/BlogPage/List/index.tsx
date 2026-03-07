@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Dividers from "@/components/Dividers";
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
@@ -84,7 +84,7 @@ const List = ({}: ListProps) => {
                                 </div>
                                 <Link
                                     className="btn-secondary btn-md mt-9 pr-3.5 lg:mt-6 md:w-full"
-                                    href={`/blog/${article.id}`}
+                                    to={`/blog/${article.id}`}
                                 >
                                     <span>Read More</span>
                                     <Icon
