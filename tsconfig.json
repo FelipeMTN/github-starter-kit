@@ -20,6 +20,5 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["src", "components", "templates", "constants", "mocks"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src", "components", "templates", "constants", "mocks"]
 }
