@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .content h5 {
+        @apply text-h5;
+    }
+    .content h6 {
+        @apply text-h6;
+    }
+    .content h5:not(:first-child) {
+        @apply mt-12 md:mt-8;
+    }
+    .content ul {
+        @apply space-y-3;
+    }
+    .content ul li {
+        @apply relative pl-5 text-xl text-greyscale-400 before:absolute before:top-2.5 before:left-0 before:w-2 before:h-2 before:rounded-full before:bg-greyscale-300;
+    }
+    .content p {
+        @apply text-xl text-greyscale-400;
+    }
+    .content figure {
+        @apply border border-greyscale-100;
+    }
+    .content figure:not(:first-child) {
+        @apply mt-12 md:mt-8;
+    }
+    .content figure:not(:last-child) {
+        @apply mb-12 md:mb-8;
+    }
+    .content h5:not(:last-child),
+    .content h6:not(:last-child),
+    .content ul:not(:last-child),
+    .content p:not(:last-child) {
+        @apply mb-5;
+    }
+
+    .splide-login .splide__pagination {
+        @apply relative bottom-auto mt-6;
+    }
+    .splide-login .splide__pagination__page {
+        @apply transition-opacity;
+    }
+    .splide-login .splide__pagination__page.is-active {
+        @apply scale-100 opacity-100;
+    }
+}
