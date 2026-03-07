@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import HomePage from "@/templates/HomePage";
 import FeaturesPage from "@/templates/FeaturesPage";
 import SolutionsPage from "@/templates/SolutionsPage";
@@ -18,6 +19,11 @@ import SignUpPage from "@/templates/SignUpPage";
 import ForgotPasswordPage from "@/templates/ForgotPasswordPage";
 import SuccessPage from "@/templates/SuccessPage";
 import PageListPage from "@/templates/PageListPage";
+
+function ArticlePageWrapper() {
+  const { id } = useParams();
+  return <ArticlePage id={id} />;
+}
 
 function App() {
   return (
@@ -45,11 +51,6 @@ function App() {
       </Routes>
     </div>
   );
-}
-
-function ArticlePageWrapper() {
-  const { id } = require("react-router-dom").useParams();
-  return <ArticlePage id={id} />;
 }
 
 export default App;
