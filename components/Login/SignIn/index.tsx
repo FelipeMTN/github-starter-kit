@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Field from "@/components/Field";
 import Checkbox from "@/components/Checkbox";
 
@@ -38,7 +38,7 @@ const SignIn = ({}: SignInProps) => {
                 />
                 <Link
                     className="text-lg font-medium text-secondary-300 transition-colors hover:text-primary-100"
-                    href="/forgot-password"
+                    to="/forgot-password"
                 >
                     Forgot Password?
                 </Link>

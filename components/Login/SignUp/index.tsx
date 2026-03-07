@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import Field from "@/components/Field";
 
 type SignUpProps = {};
@@ -48,7 +48,7 @@ const SignUp = ({}: SignUpProps) => {
                 onChange={(e: any) => setPassword(e.target.value)}
                 required
             />
-            <Link className="btn-primary btn-md w-full" href="/success">
+            <Link className="btn-primary btn-md w-full" to="/success">
                 Sign Up
             </Link>
         </form>
