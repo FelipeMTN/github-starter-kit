@@ -1,5 +1,3 @@
-"use client";
-
 import { useRef } from "react";
 import Layout from "@/components/Layout";
 import Join from "@/components/Join";
