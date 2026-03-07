@@ -3,7 +3,7 @@ import Image from "@/components/Image";
 import Slider from "./Slider";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
-import { supabase } from "@/src/integrations/supabase/client";
+import { lovable } from "@/integrations/lovable/index";
 
 type LoginProps = {
     signUp?: boolean;
@@ -11,21 +11,17 @@ type LoginProps = {
 
 const Login = ({ signUp }: LoginProps) => {
     const handleGoogleSignIn = async () => {
-        await supabase.auth.signInWithOAuth({
-            provider: "google",
-            options: {
-                redirectTo: window.location.origin,
-            },
+        const { error } = await lovable.auth.signInWithOAuth("google", {
+            redirect_uri: window.location.origin,
         });
+        if (error) console.error("Google sign-in error:", error);
     };
 
     const handleAppleSignIn = async () => {
-        await supabase.auth.signInWithOAuth({
-            provider: "apple",
-            options: {
-                redirectTo: window.location.origin,
-            },
+        const { error } = await lovable.auth.signInWithOAuth("apple", {
+            redirect_uri: window.location.origin,
         });
+        if (error) console.error("Apple sign-in error:", error);
     };
 
     return (
