@@ -65,7 +65,7 @@ const Footer = ({}: FooterProps) => (
                             key={social.id}
                         >
                             <Icon
-                                className="fill-[#666D80] transition-colors group-hover:fill-primary-100 md:w-5 md:h-5"
+                                className="fill-charcoal/50 transition-colors group-hover:fill-rust md:w-5 md:h-5"
                                 name={social.icon}
                             />
                         </a>
