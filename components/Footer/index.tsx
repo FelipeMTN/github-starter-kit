@@ -27,7 +27,7 @@ const Footer = ({}: FooterProps) => (
                             key={group.id}
                         >
                             <Link
-                                className="inline-block mb-4 text-[#666D80] transition-colors hover:text-primary-100 md:mb-2 md:text-base"
+                                className="inline-block mb-4 text-charcoal/50 transition-colors hover:text-rust md:mb-2 md:text-base"
                                 to={group.url}
                             >
                                 {group.title}
