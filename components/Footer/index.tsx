@@ -27,7 +27,7 @@ const Footer = ({}: FooterProps) => (
                             key={group.id}
                         >
                             <Link
-                                className="inline-block mb-4 text-[#666D80] transition-colors hover:text-primary-100 md:mb-2 md:text-base"
+                                className="inline-block mb-4 text-charcoal/50 transition-colors hover:text-rust md:mb-2 md:text-base"
                                 to={group.url}
                             >
                                 {group.title}
@@ -35,7 +35,7 @@ const Footer = ({}: FooterProps) => (
                             <div className="flex flex-col items-start space-y-3">
                                 {group.links.map((link) => (
                                     <Link
-                                        className="transition-colors hover:text-primary-100 md:text-base"
+                                        className="transition-colors hover:text-rust md:text-base"
                                         to={link.url}
                                         key={link.id}
                                     >
@@ -47,13 +47,13 @@ const Footer = ({}: FooterProps) => (
                     ))}
                 </div>
             </div>
-            <div className="flex justify-between items-center md:block md:pt-8 md:border-t md:border-greyscale-200">
-                <div className="flex items-center text-lg text-[#666D80] md:justify-center md:mb-4">
+            <div className="flex justify-between items-center md:block md:pt-8 md:border-t md:border-taupe">
+                <div className="flex items-center text-lg text-charcoal/50 md:justify-center md:mb-4">
                     <Icon
-                        className="w-5 h-5 mr-1 fill-[#666D80]"
+                        className="w-5 h-5 mr-1 fill-charcoal/50"
                         name="copyright"
                     />
-                    2023 Finto. All right reserved
+                    2026 Ecossistema CAFE. Todos os direitos reservados
                 </div>
                 <div className="flex space-x-4 md:justify-center">
                     {socials.map((social) => (
@@ -65,7 +65,7 @@ const Footer = ({}: FooterProps) => (
                             key={social.id}
                         >
                             <Icon
-                                className="fill-[#666D80] transition-colors group-hover:fill-primary-100 md:w-5 md:h-5"
+                                className="fill-charcoal/50 transition-colors group-hover:fill-rust md:w-5 md:h-5"
                                 name={social.icon}
                             />
                         </a>

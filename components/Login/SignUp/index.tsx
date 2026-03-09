@@ -44,9 +44,9 @@ const SignUp = ({}: SignUpProps) => {
     if (success) {
         return (
             <div className="text-center">
-                <div className="mb-4 text-h6 text-greyscale-900">Check your email</div>
-                <div className="text-lg text-greyscale-400">
-                    We've sent a confirmation link to <strong className="text-greyscale-900">{email}</strong>. Please check your inbox to verify your account.
+                <div className="mb-4 text-h6 text-charcoal">Verifique seu email</div>
+                <div className="text-lg text-charcoal/60">
+                    Enviamos um link de confirmação para <strong className="text-charcoal">{email}</strong>. Verifique sua caixa de entrada para ativar sua conta.
                 </div>
             </div>
         );
@@ -55,7 +55,7 @@ const SignUp = ({}: SignUpProps) => {
     return (
         <form className="" action="" onSubmit={handleSubmit}>
             {error && (
-                <div className="mb-4 p-3 rounded-lg bg-error-0 text-error-100 text-base">
+                <div className="mb-4 p-3 rounded-lg bg-rust/10 text-rust text-base">
                     {error}
                 </div>
             )}
@@ -63,7 +63,7 @@ const SignUp = ({}: SignUpProps) => {
                 <Field
                     className="flex-1"
                     classInput="h-12"
-                    placeholder="First name"
+                    placeholder="Nome"
                     value={firstName}
                     onChange={(e: any) => setFirstName(e.target.value)}
                     required
@@ -71,7 +71,7 @@ const SignUp = ({}: SignUpProps) => {
                 <Field
                     className="flex-1"
                     classInput="h-12"
-                    placeholder="Last name"
+                    placeholder="Sobrenome"
                     value={lastName}
                     onChange={(e: any) => setLastName(e.target.value)}
                     required
@@ -89,7 +89,7 @@ const SignUp = ({}: SignUpProps) => {
             <Field
                 className="mb-10 md:mb-6"
                 classInput="h-12"
-                placeholder="Password (min 6 characters)"
+                placeholder="Senha (mínimo 6 caracteres)"
                 type="password"
                 value={password}
                 onChange={(e: any) => setPassword(e.target.value)}
@@ -100,7 +100,7 @@ const SignUp = ({}: SignUpProps) => {
                 type="submit"
                 disabled={loading}
             >
-                {loading ? "Creating Account..." : "Sign Up"}
+                {loading ? "Criando conta..." : "Criar Conta"}
             </button>
         </form>
     );

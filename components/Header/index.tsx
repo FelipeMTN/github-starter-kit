@@ -33,8 +33,8 @@ const Header = ({ className, dark }: HeaderProps) => {
                 className || ""
             } ${
                 dark
-                    ? "bg-secondary-300 border-white/[.09]"
-                    : "bg-white border-greyscale-200/60"
+                    ? "bg-charcoal border-cream/[.09]"
+                    : "bg-cream border-taupe/60"
             }`}
         >
             <div className="container-md flex items-center h-22 md:h-18">
@@ -54,15 +54,15 @@ const Header = ({ className, dark }: HeaderProps) => {
                 <div
                     className={`flex items-center grow lg:fixed lg:top-0 lg:right-0 lg:bottom-0 lg:z-10 lg:w-80 lg:flex-col lg:items-stretch lg:py-20 lg:px-8 lg:pb-8 lg:transition-transform lg:translate-x-full ${
                         visible ? "!translate-x-0" : ""
-                    } ${dark ? "lg:bg-secondary-300" : "lg:bg-greyscale-0"}`}
+                    } ${dark ? "lg:bg-charcoal" : "lg:bg-cream"}`}
                 >
                     <nav className="flex items-center space-x-4 lg:flex-col lg:items-stretch lg:space-x-0 lg:space-y-8">
                         {navigationHeader.map((link) => (
                             <Link
                                 className={`px-2.5 py-1 text-base font-medium transition-colors lg:text-xl ${
                                     dark
-                                        ? "text-greyscale-0 hover:text-primary-300"
-                                        : "text-greyscale-900 hover:text-primary-100"
+                                        ? "text-cream hover:text-rust-50"
+                                        : "text-charcoal hover:text-rust"
                                 }`}
                                 to={link.url}
                                 key={link.id}
@@ -75,15 +75,15 @@ const Header = ({ className, dark }: HeaderProps) => {
                         <Link
                             className={`btn-secondary bg-transparent btn-sm ${
                                 dark
-                                    ? "text-greyscale-0 hover:border-primary-300 hover:bg-primary-300 hover:text-greyscale-900"
-                                    : ""
+                                    ? "text-cream border-cream/30 hover:border-rust hover:bg-rust hover:text-cream"
+                                    : "border-taupe hover:border-rust hover:bg-rust hover:text-cream"
                             }`}
                             to="/sign-in"
                         >
-                            Sign In
+                            Entrar
                         </Link>
                         <Link className="btn-primary btn-sm" to="/sign-up">
-                            Open an Account
+                            Criar Conta
                         </Link>
                     </div>
                 </div>
@@ -94,20 +94,20 @@ const Header = ({ className, dark }: HeaderProps) => {
                             : ""
                     } ${
                         dark
-                            ? "before:bg-greyscale-0 after:bg-greyscale-0"
-                            : "before:bg-greyscale-900 after:bg-greyscale-900"
+                            ? "before:bg-cream after:bg-cream"
+                            : "before:bg-charcoal after:bg-charcoal"
                     }`}
                     onClick={toggleMenu}
                 >
                     <span
                         className={`w-5 h-0.5 my-1 rounded-full transition-all ${
                             visible ? "w-0 opacity-0" : ""
-                        } ${dark ? "bg-greyscale-0" : "bg-greyscale-900"}`}
+                        } ${dark ? "bg-cream" : "bg-charcoal"}`}
                     ></span>
                 </button>
             </div>
             <div
-                className={`hidden fixed inset-0 z-5 bg-greyscale-900/90 lg:block lg:invisible lg:opacity-0 lg:transition-all ${
+                className={`hidden fixed inset-0 z-5 bg-charcoal/90 lg:block lg:invisible lg:opacity-0 lg:transition-all ${
                     visible ? "lg:!visible lg:!opacity-100" : ""
                 }`}
                 onClick={closeMenu}
