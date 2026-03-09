@@ -35,7 +35,7 @@ const Footer = ({}: FooterProps) => (
                             <div className="flex flex-col items-start space-y-3">
                                 {group.links.map((link) => (
                                     <Link
-                                        className="transition-colors hover:text-primary-100 md:text-base"
+                                        className="transition-colors hover:text-rust md:text-base"
                                         to={link.url}
                                         key={link.id}
                                     >
