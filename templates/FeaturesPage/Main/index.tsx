@@ -19,35 +19,35 @@ const Main = ({}: MainProps) => (
                             height={18}
                             alt=""
                         />
-                        Funcionalidades
+                        Payments
                     </div>
                     <div className="max-w-[32rem] mb-4 text-h1 xl:text-h2 lg:max-w-full">
-                        Ferramentas Inteligentes para Suas Finanças
+                        Global Payment to Grow Your Businesses
                     </div>
-                    <div className="max-w-[29.6rem] mb-10 text-charcoal/70 lg:max-w-full md:mb-6">
-                        Dashboard completo, protocolo KRAKEN de investimentos, 
-                        assistente de IA e muito mais. Tudo projetado para 
-                        transformar sua gestão financeira em uma experiência 
-                        premium.
+                    <div className="max-w-[29.6rem] mb-10 text-greyscale-400 lg:max-w-full md:mb-6">
+                        Growing a SaaS business can be hard work. Whether you're
+                        just starting out or selling like hotcakes, we've got
+                        your back. It's free to start no trial, no contract, no
+                        risk.
                     </div>
                     <div className="flex space-x-4 md:block md:space-x-0 md:space-y-4">
                         <Link
                             className="btn-primary min-w-[10.6rem] px-5 md:min-w-full"
                             to="/sign-up"
                         >
-                            Comece Agora
+                            Open an Account
                         </Link>
                         <Link
                             className="btn-secondary min-w-[10.6rem] px-5 md:min-w-full"
                             to="/contact-us"
                         >
-                            Fale Conosco
+                            Contact Sales
                         </Link>
                     </div>
                 </div>
-                <div className="relative shrink-0 w-[31.25rem] p-10 bg-cream-200 lg:w-full md:p-6">
+                <div className="relative shrink-0 w-[31.25rem] p-10 bg-greyscale-25 lg:w-full md:p-6">
                     <Image
-                        className="w-full border border-taupe shadow-3"
+                        className="w-full border border-greyscale-100 shadow-3"
                         src="/images/content/features-pic.jpg"
                         width={420}
                         height={420}
@@ -56,7 +56,7 @@ const Main = ({}: MainProps) => (
                 </div>
             </div>
             <Companies
-                title="Confiado por pessoas buscando prosperidade consciente"
+                title="Trusted by thousand companies in the world"
                 images={companiesHeroDark}
             />
         </div>

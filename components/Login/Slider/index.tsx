@@ -5,27 +5,27 @@ import Image from "@/components/Image";
 
 const items = [
     {
-        title: "Controle Total das Suas Finanças",
+        title: "Take Your Business Faster",
         content:
-            "Dashboard completo com patrimônio líquido em tempo real, score de saúde financeira e indicadores de performance personalizados.",
+            "Ullamcorper urna fringilla lorem scelerisque nunc. Amet odio cras amet adipiscing ut adipiscing urpis donec vel",
         image: "/images/content/slider-pic-1.png",
     },
     {
-        title: "Protocolo KRAKEN de Investimentos",
+        title: "Create Custom Cards",
         content:
-            "Sistema proprietário de alocação de ativos em 6 categorias estratégicas para construção patrimonial sustentável.",
+            "Ullamcorper urna fringilla lorem scelerisque nunc. Amet odio cras amet adipiscing ut adipiscing urpis donec vel",
         image: "/images/content/slider-pic-2.png",
     },
     {
-        title: "Assistente de IA Personalizado",
+        title: "Take Your Business Faster",
         content:
-            "Análise conversacional de finanças, insights personalizados e recomendações contextuais para suas decisões.",
+            "Ullamcorper urna fringilla lorem scelerisque nunc. Amet odio cras amet adipiscing ut adipiscing urpis donec vel",
         image: "/images/content/slider-pic-1.png",
     },
     {
-        title: "Cultive Seu Patrimônio",
+        title: "Create Custom Cards",
         content:
-            "Metas financeiras, orçamentos inteligentes e notificações contextuais para você alcançar a liberdade financeira.",
+            "Ullamcorper urna fringilla lorem scelerisque nunc. Amet odio cras amet adipiscing ut adipiscing urpis donec vel",
         image: "/images/content/slider-pic-2.png",
     },
 ];
@@ -34,7 +34,7 @@ type SliderProps = {};
 
 const Slider = ({}: SliderProps) => (
     <div className="flex p-2.5 lg:hidden">
-        <div className="relative flex items-center grow bg-charcoal">
+        <div className="relative flex items-center grow bg-secondary-300">
             <div className="relative z-2 w-[55rem] py-8 4xl:w-[41.875rem] 2xl:w-[36rem] xl:w-[30rem]">
                 <Splide
                     className="splide-login"
@@ -56,10 +56,10 @@ const Slider = ({}: SliderProps) => (
                                 />
                             </div>
                             <div className="max-w-[28.125rem] mx-auto text-center">
-                                <div className="mb-4 text-h5 text-cream xl:text-h6">
+                                <div className="mb-4 text-h5 text-greyscale-0 xl:text-h6">
                                     {item.title}
                                 </div>
-                                <div className="text-lg text-cream/50">
+                                <div className="text-lg text-white/50">
                                     {item.content}
                                 </div>
                             </div>

@@ -36,7 +36,7 @@ const SignIn = ({}: SignInProps) => {
     return (
         <form className="" action="" onSubmit={handleSubmit}>
             {error && (
-                <div className="mb-4 p-3 rounded-lg bg-rust/10 text-rust text-base">
+                <div className="mb-4 p-3 rounded-lg bg-error-0 text-error-100 text-base">
                     {error}
                 </div>
             )}
@@ -52,7 +52,7 @@ const SignIn = ({}: SignInProps) => {
             <Field
                 className="mb-5 md:mb-4"
                 classInput="h-12"
-                placeholder="Senha"
+                placeholder="Password"
                 type="password"
                 value={password}
                 onChange={(e: any) => setPassword(e.target.value)}
@@ -60,16 +60,16 @@ const SignIn = ({}: SignInProps) => {
             />
             <div className="flex justify-between items-center mb-10 md:mb-6">
                 <Checkbox
-                    classLabel="font-medium text-charcoal"
-                    label="Lembrar de mim"
+                    classLabel="font-medium text-greyscale-900"
+                    label="Remember me"
                     value={remember}
                     onChange={() => setRemember(!remember)}
                 />
                 <Link
-                    className="text-lg font-medium text-charcoal transition-colors hover:text-rust"
+                    className="text-lg font-medium text-secondary-300 transition-colors hover:text-primary-100"
                     to="/forgot-password"
                 >
-                    Esqueceu a senha?
+                    Forgot Password?
                 </Link>
             </div>
             <button
@@ -77,7 +77,7 @@ const SignIn = ({}: SignInProps) => {
                 type="submit"
                 disabled={loading}
             >
-                {loading ? "Entrando..." : "Entrar"}
+                {loading ? "Signing In..." : "Sign In"}
             </button>
         </form>
     );

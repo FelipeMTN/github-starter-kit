@@ -9,45 +9,45 @@ import { companiesHero } from "@/mocks/companies";
 type MainProps = {};
 
 const Main = ({}: MainProps) => (
-    <Dividers className="bg-charcoal text-cream" hero light>
+    <Dividers className="bg-secondary-300 text-greyscale-0" hero light>
         <div className="py-22 md:pt-12 md:pb-6">
             <div className="container">
                 <div className="flex items-center mb-22 lg:block md:mb-6">
                     <div className="grow pr-10 lg:pr-0">
-                        <div className="label mb-4 bg-charcoal-100 border border-rust/50 text-sm text-rust-50">
-                            ☕ Ecossistema CAFE 2.0
+                        <div className="label mb-4 bg-white/[.04] border border-[#FFC091]/50 text-sm text-[#FFC091]">
+                            🎉 Announcing Finto Beta 2.0
                             <Icon
-                                className="w-4 h-4 ml-2 fill-rust-50"
+                                className="w-4 h-4 ml-2 fill-[#FFC091]"
                                 name="arrow-right"
                             />
                         </div>
                         <div className="mb-4 text-h1 xl:text-h2 md:text-h3">
-                            Seu Sistema Operacional Financeiro Pessoal
+                            All In One App Finance for Your Business
                         </div>
-                        <div className="mb-10 text-cream/70 md:text-lg">
-                            Cultive sabedoria financeira através de tecnologia 
-                            humanizada. Controle, Alocação, Futuro e Equilíbrio — 
-                            tudo em uma experiência premium projetada para 
-                            transformar sua relação com o dinheiro.
+                        <div className="mb-10 text-white/70 md:text-lg">
+                            Keep your business account and all your finance
+                            needs safely organized under one roof. Manage money
+                            quickly, easily & efficiently. Whether you're alone
+                            or leading a team.
                         </div>
                         <div className="flex space-x-4 md:block md:space-x-0 md:space-y-4">
                             <Link
                                 className="btn-primary min-w-[10.6rem] px-5 md:min-w-full"
                                 to="/sign-up"
                             >
-                                Comece Agora
+                                Open an Account
                             </Link>
                             <Link
-                                className="btn-secondary min-w-[10.6rem] px-5 md:min-w-full bg-transparent border-cream/30 text-cream hover:bg-sage hover:border-sage"
+                                className="btn-secondary min-w-[10.6rem] px-5 md:min-w-full"
                                 to="/contact-us"
                             >
-                                Fale Conosco
+                                Contact Sales
                             </Link>
                         </div>
                     </div>
                     <div className="relative shrink-0 w-[49.48%] lg:w-full lg:mt-16 md:mt-8">
                         <Image
-                            className="w-full border border-cream/[.15] shadow-1"
+                            className="w-full border border-white/[.15] shadow-1"
                             src="/images/content/screenshot-1.jpg"
                             width={574}
                             height={520}
@@ -65,7 +65,7 @@ const Main = ({}: MainProps) => (
                     </div>
                 </div>
                 <Companies
-                    title="Confiado por milhares de pessoas transformando suas finanças"
+                    title="Trusted by thousand companies in the world"
                     images={companiesHero}
                     light
                 />
