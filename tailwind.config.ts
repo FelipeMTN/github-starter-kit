@@ -299,7 +299,7 @@ const config: Config = {
                         {},
                 },
                 ".label": {
-                    "@apply inline-flex items-center h-8 px-4 bg-primary-25 rounded-full text-base font-medium text-secondary-300":
+                    "@apply inline-flex items-center h-8 px-4 bg-cream-300 rounded-full text-base font-medium text-charcoal":
                         {},
                 },
                 ".label-sm": {
