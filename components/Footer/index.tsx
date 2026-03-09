@@ -47,13 +47,13 @@ const Footer = ({}: FooterProps) => (
                     ))}
                 </div>
             </div>
-            <div className="flex justify-between items-center md:block md:pt-8 md:border-t md:border-greyscale-200">
-                <div className="flex items-center text-lg text-[#666D80] md:justify-center md:mb-4">
+            <div className="flex justify-between items-center md:block md:pt-8 md:border-t md:border-taupe">
+                <div className="flex items-center text-lg text-charcoal/50 md:justify-center md:mb-4">
                     <Icon
-                        className="w-5 h-5 mr-1 fill-[#666D80]"
+                        className="w-5 h-5 mr-1 fill-charcoal/50"
                         name="copyright"
                     />
-                    2023 Finto. All right reserved
+                    2026 Ecossistema CAFE. Todos os direitos reservados
                 </div>
                 <div className="flex space-x-4 md:justify-center">
                     {socials.map((social) => (
