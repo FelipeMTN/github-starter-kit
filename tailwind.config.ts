@@ -283,11 +283,11 @@ const config: Config = {
                         {},
                 },
                 ".btn-primary": {
-                    "@apply btn bg-primary-300 text-secondary-300 hover:bg-primary-100":
+                    "@apply btn bg-rust text-cream hover:bg-rust-300":
                         {},
                 },
                 ".btn-secondary": {
-                    "@apply btn bg-greyscale-0 border-greyscale-100 text-greyscale-900 hover:bg-primary-300 hover:border-transparent":
+                    "@apply btn bg-cream border-taupe text-charcoal hover:bg-sage hover:text-cream hover:border-transparent":
                         {},
                 },
                 ".btn-md": {
